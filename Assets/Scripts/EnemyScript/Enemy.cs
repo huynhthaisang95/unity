@@ -17,4 +17,11 @@ using UnityEngine;
 	void FixedUpdate () {
 		myBody.velocity = new Vector2 (0f, -EnemySpeed);
 	}
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player") {
+            Destroy(collision.gameObject);
+        }
+    }
 }

@@ -17,7 +17,7 @@ public class ShotBullet : MonoBehaviour {
     {
         Vector3 temp = transform.position;
         temp.y += 0.8f;
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.2f);
         Instantiate(BlackBullet, temp, Quaternion.identity);
         StartCoroutine(Shot());
     }

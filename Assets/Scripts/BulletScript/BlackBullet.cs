@@ -17,5 +17,18 @@ public class BlackBullet : MonoBehaviour {
 	void FixedUpdate () {
         mybody.velocity = new  Vector2(0f, Bulletspeed);      
     }
-  
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Enemy")
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
+
+        if (collision.tag == "Border") {
+            Destroy(gameObject);
+        }
+    }
+
 }
