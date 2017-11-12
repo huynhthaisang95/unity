@@ -25,7 +25,16 @@ public class BlackBullet2 : MonoBehaviour {
         if (collision.tag == "Player")
         {
             Destroy(collision.gameObject);
+            if (GamePlayController.instance == true)
+            {
+                GamePlayController.instance.BoatDiedShowPanel();
+            }
+            else
+            {
+                GamePlayController2.instance.BoatDiedShowPanel();
+            }
         }
+        
 
         if (collision.tag == "Border")
         {

@@ -85,9 +85,12 @@
     <Compile Include="Assets\Scripts\BoatScript\ShotBullet.cs" />
     <Compile Include="Assets\Scripts\BulletScript\BlackBullet.cs" />
     <Compile Include="Assets\Scripts\BulletScript\BlackBullet2.cs" />
+    <Compile Include="Assets\Scripts\Controller\GamePlayController.cs" />
+    <Compile Include="Assets\Scripts\Controller\GamePlayController2.cs" />
     <Compile Include="Assets\Scripts\Controller\MainmenuController.cs" />
     <Compile Include="Assets\Scripts\EnemyScript\Enemy.cs" />
     <Compile Include="Assets\Scripts\EnemyScript\EnemyShot.cs" />
+    <Compile Include="Assets\Scripts\EnemyScript\EnemyShot2.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

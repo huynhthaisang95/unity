@@ -9,6 +9,13 @@ public class MainmenuController : MonoBehaviour {
         SceneManager.LoadScene("Island1");
     }
 
+    public void _PlayIsland2()
+    {
+        SceneManager.LoadScene("Island2");
+    }
+    public void _Quit() {
+        Application.Quit();
+    }
 
 	// Use this for initialization
 	void Start () {
