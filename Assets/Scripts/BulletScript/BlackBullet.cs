@@ -29,6 +29,11 @@ public class BlackBullet : MonoBehaviour {
         if (collision.tag == "Border") {
             Destroy(gameObject);
         }
+
+        if (collision.tag == "Reef") {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
     }
 
 }
