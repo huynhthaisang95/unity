@@ -12,7 +12,6 @@ public class ShotBullet : MonoBehaviour {
         StartCoroutine(Shot());
     }
 
-
     IEnumerator Shot()
     {
         Vector3 temp = transform.position;

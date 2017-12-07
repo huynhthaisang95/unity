@@ -12,6 +12,8 @@ public class EnemyShot : MonoBehaviour {
     {
         StartCoroutine(Shot());
     }
+    
+
 
 
     IEnumerator Shot()

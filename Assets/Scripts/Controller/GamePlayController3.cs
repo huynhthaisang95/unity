@@ -8,7 +8,7 @@ public class GamePlayController3 : MonoBehaviour
 
 
     [SerializeField]
-    private GameObject gameOverPanel;
+    private GameObject gameOverPanel,PausePanel;
 
     public static GamePlayController3 instance;
     void Awake()
@@ -35,11 +35,30 @@ public class GamePlayController3 : MonoBehaviour
     {
 
         SceneManager.LoadScene("MainMenu");
+        gameOverPanel.gameObject.SetActive(false);
     }
 
     public void BoatDiedShowPanel()
     {
         gameOverPanel.gameObject.SetActive(true);
+    }
+
+
+    public void PauseButton()
+    {
+        PausePanel.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void resumeButton()
+    {
+        PausePanel.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
+    public void QuitButton()
+    {
+        Application.Quit();
     }
     void Start()
     {

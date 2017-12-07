@@ -7,7 +7,7 @@ public class GamePlayController2 : MonoBehaviour
 {
 
     [SerializeField]
-    private GameObject gameOverPanel;
+    private GameObject gameOverPanel,Pausepanel;
 
     public static GamePlayController2 instance;
     void Awake()
@@ -39,6 +39,24 @@ public class GamePlayController2 : MonoBehaviour
     public void BoatDiedShowPanel()
     {
         gameOverPanel.gameObject.SetActive(true);
+    }
+
+
+    public void PauseButton()
+    {
+        Pausepanel.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void resumeButton()
+    {
+        Pausepanel.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
+    public void QuitButton()
+    {
+        Application.Quit();
     }
     void Start()
     {

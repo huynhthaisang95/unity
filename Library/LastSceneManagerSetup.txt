@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Island3.unity
+- path: Assets/Scenes/Island4.unity
   isLoaded: 1
   isActive: 1

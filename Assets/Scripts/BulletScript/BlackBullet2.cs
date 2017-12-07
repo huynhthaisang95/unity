@@ -40,5 +40,6 @@ public class BlackBullet2 : MonoBehaviour {
         {
             Destroy(gameObject);
         }
+
     }
 }

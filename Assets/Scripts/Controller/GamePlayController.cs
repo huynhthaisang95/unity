@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GamePlayController : MonoBehaviour {
 
     [SerializeField]
-    private GameObject gameOverPanel;
+    private GameObject gameOverPanel,PausePanel;
 
     public static GamePlayController instance;
     void Awake()
@@ -33,6 +33,20 @@ public class GamePlayController : MonoBehaviour {
 
     public void BoatDiedShowPanel() {
         gameOverPanel.gameObject.SetActive(true);
+    }
+
+    public void PauseButton() {
+        PausePanel.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void resumeButton() {
+        PausePanel.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
+    public void QuitButton() {
+        Application.Quit();
     }
     void Start()
     {
